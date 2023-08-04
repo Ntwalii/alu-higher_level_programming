@@ -1,3 +1,3 @@
 #!/bin/bash
-# sends data from a file and displays response
-curl -sX POST "$1" -d @"$2" -H "content-type: application/json"
+# Sends a JSON POST request.
+curl -s -H "Content-Type: application/json" -d "$(cat "$2")" "$1"
